@@ -1,0 +1,32 @@
+{
+  "name": "web3m",
+  "version": "0.0.1",
+  "discription": "A comprehensive package for interacting with multiple blockchain networks, supporting functionalities like wallet generation, transaction management, and more. Simplify multi-chain development with an easy-to-use interface for various blockchain ecosystems.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node tests/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/truethari/web3m.git"
+  },
+  "keywords": [
+    "web3",
+    "ethers",
+    "ethereum"
+  ],
+  "author": "Tharindu N. Madhusanka",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "ethers": "^6.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "prettier": "^3.3.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}
