@@ -1,5 +1,5 @@
 {
-  "name": "web3m",
+  "name": "easy-chain",
   "version": "0.0.1",
   "discription": "A comprehensive package for interacting with multiple blockchain networks, supporting functionalities like wallet generation, transaction management, and more. Simplify multi-chain development with an easy-to-use interface for various blockchain ecosystems.",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/truethari/web3m.git"
+    "url": "git+https://github.com/truethari/easy-chain.git"
   },
   "keywords": [
     "web3",
