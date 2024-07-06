@@ -1,5 +1,7 @@
 # Easy-Chain Blockchain Toolkit
 
+[![tests](https://github.com/truethari/easy-chain/actions/workflows/pull-request.yaml/badge.svg)](https://github.com/truethari/easy-chain/actions/workflows/pull-request.yaml)
+
 This project is an npm package designed to support multiple blockchain networks with various functionalities such as wallet generation, transaction management, and more. Currently, it supports generating wallets for Ethereum and Cosmos chains using TypeScript and Ethers.js.
 
 ## Table of Contents
