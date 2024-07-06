@@ -1,6 +1,6 @@
 import { SUPPORTED_CHAINS } from "../utils/constants";
 import { generateWallet as generateWalletETH } from "../ethers";
-
+import { generateWallet as generateWalletCosmos } from "../cosmwasm";
 import type { TChain } from "../types";
 
 /**
@@ -14,6 +14,8 @@ export function generateWallet(chain: TChain): object {
       return generateWalletETH();
     case SUPPORTED_CHAINS.POLYGON:
       return generateWalletETH();
+    case SUPPORTED_CHAINS.COSMOS:
+      return generateWalletCosmos();
     default:
       throw new Error(
         "Unsupported chain. Please import { CHAINS } from 'web3m' and use one of the supported chains."
