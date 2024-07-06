@@ -1,7 +1,11 @@
 export type TChain = "ETHEREUM" | "POLYGON" | "COSMOS";
 
-export type TCreateWalletResponse = {
+export interface IEthereumWallet {
   address: string;
-  privateKey?: string;
-  mnemonic?: string;
-};
+  privateKey: string;
+}
+
+export interface ICosmosWallet {
+  address: string;
+  mnemonic: string;
+}

@@ -1,21 +1,22 @@
 import { SUPPORTED_CHAINS } from "../utils/constants";
-import { generateWallet as generateWalletETH } from "../ethers";
-import { generateWallet as generateWalletCosmos } from "../cosmwasm";
-import type { TChain } from "../types";
+import { createWallet as createWalletETH } from "../ethers";
+import { createWallet as createWalletCosmos } from "../cosmwasm";
+
+import type { TChain, IEthereumWallet, ICosmosWallet } from "../types";
 
 /**
- * Generates a new wallet for the specified chain.
+ * Creates a new wallet for the specified chain.
  * @param {TChain} chain The chain for which to generate a wallet.
- * @returns {object} An object containing the wallet address and private key.
+ * @returns {IEthereumWallet | ICosmosWallet} An object containing the wallet address and private key.
  */
-export function generateWallet(chain: TChain): object {
+export async function generateWallet(chain: TChain): Promise<IEthereumWallet | ICosmosWallet> {
   switch (chain) {
     case SUPPORTED_CHAINS.ETHEREUM:
-      return generateWalletETH();
+      return createWalletETH();
     case SUPPORTED_CHAINS.POLYGON:
-      return generateWalletETH();
+      return createWalletETH();
     case SUPPORTED_CHAINS.COSMOS:
-      return generateWalletCosmos();
+      return createWalletCosmos();
     default:
       throw new Error(
         "Unsupported chain. Please import { CHAINS } from 'web3m' and use one of the supported chains."

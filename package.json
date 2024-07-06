@@ -6,7 +6,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "npm run build && node tests/index.js"
+    "test": "npm run build && npx jest",
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -25,8 +27,11 @@
     "ethers": "^6.13.1"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.12",
     "@types/node": "^20.14.9",
+    "husky": "^9.0.11",
     "prettier": "^3.3.2",
+    "ts-jest": "^29.1.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
   }
